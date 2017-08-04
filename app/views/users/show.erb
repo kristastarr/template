@@ -1,0 +1,8 @@
+<h1> Hello, <%= current_user.user_name %> </h1>
+
+<a href="/users/<%=current_user.id%>/edit">Edit Your Profile</a><br>
+
+ <form method="post" action="/<%=current_user.id%>/delete">
+            <input type="hidden"  name="_method"  value="delete" >
+            <input type="submit" value="Delete Your Profile">
+ </form>

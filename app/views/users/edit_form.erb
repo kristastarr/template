@@ -1,0 +1,13 @@
+<h1>Edit Your Details</h1>
+
+<% if @error %>
+<p><%= @error %></p>
+<% end %>
+
+<form action = "/users/<%= @user.id %>/edit" method = "post">
+<input type="hidden" name="_method" value="put">
+User Name: <input type="text" name = "user[user_name]" value= "<%= @user.user_name %>"><br>
+Email: <input type="text" name = "user[email]" value= "<%= @user.email %>" ><br>
+Password: <input type="text" name = "user[password]" value= ""><br>
+<input type= "submit" value = "Update Profile">
+</form>

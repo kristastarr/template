@@ -1,0 +1,15 @@
+<h1> Register Here! </h1>
+
+<p>Enter your details to create your account:</p>
+<% if @error %>
+<p><%= @error %></p>
+<% end %>
+
+ <form action = "/users/new" method = "post">
+User Name: <input type="text" name = "user[user_name]"><br>
+Email: <input type="text" name = "user[email]" ><br>
+Password: <input type="password" name = "user[password]"><br>
+<input type= "submit" value = "Create Account">
+ </form>
+
+</div>
