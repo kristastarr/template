@@ -21,7 +21,19 @@ require "sinatra/reloader" if development?
 require 'erb'
 require 'bcrypt'
 require 'pry'
-require 'irbtools'
+require 'instagram'
+
+
+enable :sessions
+
+CALLBACK_URL = "http://localhost:9393/oauth/callback"
+ CLIENT_ID = ""
+
+Instagram.configure do |config|
+ config.client_id = " "
+  config.client_secret = "YOUR_CLIENT_SECRET"
+end
+
 
 # Some helper constants for path-centric logic
 APP_ROOT = Pathname.new(File.expand_path('../../', __FILE__))
